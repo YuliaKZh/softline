@@ -1,0 +1,52 @@
+@use "./styles/base" as *;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 1280px) {
+    width: 1250px;
+  }
+
+  &__header {
+    margin-bottom: 27px;
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 79px;
+    }
+  }
+
+  &__main-block {
+    margin-bottom: 50px;
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: $accent-color;
+    @media screen and (min-width: 1280px) {
+      font-size: 56px;
+      margin-bottom: 55px;
+    }
+
+    &_left {
+      text-align: left;
+    }
+  }
+
+  &__bottom-block {
+    @media screen and (min-width: 1280px) {
+      width: 1110px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

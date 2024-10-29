@@ -1,0 +1,35 @@
+@use "../../styles/base" as *;
+.infoBlock {
+  margin: 0 5px;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 1280px) {
+    width: 1110px;
+    margin: 0 auto 79px;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 114%;
+    font-weight: 500;
+    color: $secondary-primary;
+    margin-bottom: 10px;
+    @media screen and (min-width: 1280px) {
+      font-size: 56px;
+      line-height: 120%;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 120%;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+}

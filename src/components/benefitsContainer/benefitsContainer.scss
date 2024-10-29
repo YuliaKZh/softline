@@ -1,0 +1,75 @@
+@use "../../styles/base" as *;
+
+.benefits {
+  box-shadow: 0px 0px 16px 0px rgba($black, 0.06);
+  clip-path: inset(-8px 0px -8px 0px);
+  margin: 50px 0;
+  padding: 24px 5px;
+  @media screen and (min-width: 1280px) {
+    clip-path: unset;
+    margin: 100px auto;
+    padding: 80px 110px;
+  }
+  &__title {
+    text-align: center;
+    font-weight: 500;
+    color: $gray-dark-secondary;
+
+    span {
+      color: $secondary-primary;
+    }
+
+    &_h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+      @media screen and (min-width: 1280px) {
+        font-size: 56px;
+        margin-bottom: 50px;
+      }
+    }
+    &_h3 {
+      font-size: 22px;
+      margin-bottom: 25px;
+      @media screen and (min-width: 1280px) {
+        font-size: 40px;
+        margin-bottom: 50px;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -7px;
+    margin-right: -7px;
+    padding: 0 20px 24px;
+    list-style-type: none;
+    &_bottom {
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 50px;
+      }
+    }
+    li {
+      width: calc(50% - 14px);
+      margin: 7px;
+      text-align: center;
+      @media screen and (min-width: 1280px) {
+        width: calc(20% - 14px);
+      }
+    }
+  }
+
+  &__line {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $gray-light-secondary;
+      margin-bottom: 24px;
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 70px;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "../../styles/base" as *;
+.promoContainer {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 8px;
+  li {
+    width: calc(50% - 4px);
+    text-align: center;
+    @media screen and (min-width: 1280px) {
+      width: calc(20% - 4px);
+    }
+    &:last-child {
+      width: 180px;
+      margin: 0 auto;
+      @media screen and (min-width: 1280px) {
+        width: inherit;
+      }
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    flex-wrap: nowrap;
+  }
+}

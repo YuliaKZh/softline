@@ -1,0 +1,21 @@
+@use "../../styles/base" as *;
+
+.swiper.personalSlider {
+  max-width: 100%;
+  height: 100%;
+  @media screen and (min-width: 1250px) {
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & .swiper-pagination {
+    height: 30px;
+  }
+}
+
+.swiper-slide {
+  img {
+    object-fit: scale-down;
+  }
+}

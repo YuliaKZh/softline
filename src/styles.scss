@@ -1,0 +1,31 @@
+@use "./styles/base" as *;
+
+@font-face {
+  font-family: "Proxima Nova Condensed";
+  src: url("/src/fonts/proxima-nova-condensed-regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova Condensed";
+  src: url("/src/fonts/proxima-nova-condensed-bold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova Condensed";
+  src: url("/src/fonts/proxima-nova-condensed-semibold.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-size: 16px;
+  background-color: $white;
+  font-family: "Proxima Nova Condensed", sans-serif;
+  font-weight: normal;
+  color: $gray-dark-secondary;
+  padding-bottom: 50px;
+}

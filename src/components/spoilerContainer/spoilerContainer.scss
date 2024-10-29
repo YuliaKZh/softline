@@ -1,0 +1,15 @@
+@use "../../styles/base" as *;
+.spoilerContainer {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    .spoiler {
+      width: calc(50% - 10px);
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@use "../../styles/base" as *;
+
+.spoiler {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  font-size: 20px;
+  line-height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  &.solution {
+    background-image: url(/src/image/solutionSpoilerBg.png);
+  }
+  &.cloud {
+    background-image: url(/src/image/cloudSpoilerBg.png);
+  }
+  &.po {
+    background-image: url(/src/image/poSpoilerBg.png);
+  }
+  &.import {
+    background-image: url(/src/image/importSpoilerBg.png);
+  }
+  &.kiber {
+    background-image: url(/src/image/kiberSpoilerBg.png);
+  }
+  &.support {
+    background-image: url(/src/image/supportSpoilerBg.png);
+  }
+  &__title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    color: $white;
+    transition: margin 0.2s ease-in-out;
+    @media screen and (min-width: 1280px) {
+      margin-top: 200px;
+      margin-bottom: 20px;
+    }
+  }
+  & svg {
+    position: relative;
+    z-index: 1;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba($accent-color, 0.6);
+    z-index: 0;
+    transition: top 0.2s ease-in-out;
+    @media screen and (min-width: 1280px) {
+      top: 200px;
+    }
+  }
+  &:hover {
+    .spoiler__description {
+      height: auto;
+    }
+    .spoiler__title {
+      margin-top: 0;
+    }
+    &::after {
+      top: 0;
+    }
+  }
+  &__description {
+    position: relative;
+    z-index: 1;
+    font-size: 16px;
+    line-height: 140%;
+    color: $white;
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+    @media screen and (min-width: 1280px) {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+
+  &.visible {
+    height: 240px;
+    .spoiler__description {
+      display: block;
+    }
+
+    .spoiler__title {
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+  }
+  @media screen and (max-width: 1279px) {
+    &:not(.visible) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    height: 260px;
+    padding-top: 20px;
+  }
+}
+
+.spoiler-icon {
+  display: block;
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
